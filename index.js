@@ -50,10 +50,13 @@ function animation() {
         enemy.velocity.y = -20
 
 
-    //contatto con il nemico
-    if (player.attacco.position.x + player.attacco.width >= enemy.position.x && player.attacco.position.x <= enemy.attacco.position.x + enemy.attacco.width) {
+    //condizione di contatto orizzontale o verticale con il nemico
+    if (player.attacco.position.x + player.attacco.width >= enemy.position.x
+        && player.attacco.position.x <= enemy.attacco.position.x + enemy.attacco.width
+        && player.attacco.position.y + player.attacco.height >= enemy.attacco.position.y &&
+        player.attacco.position.y <= enemy.attacco.position.y + enemy.attacco.height) {
         console.log('contatto')
-        
+
     }
 }
 
